@@ -55,9 +55,15 @@ $(document).ready(function(){
             data: $(this).serialize()
         }).done(function (){
             $(this).find("input").val("");
-            $('.menu__overlay, #thanks').fadeIn('slow')
+            $('.overlay, #thanks').fadeIn('slow')
             $('form').trigger('reset');
         });
         return false;
+    });
+
+    // Modal #thanks close
+    
+    $('.modal__close').on('click', function() {
+        $('.overlay, #order').fadeOut('slow');
     });
 });
