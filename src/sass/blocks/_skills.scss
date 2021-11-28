@@ -1,0 +1,58 @@
+.skills {
+    padding-top: 126px;
+    &__wrapper {
+        margin-top: 60px;
+        display: grid;
+        grid-template: repeat(2, 270px) / repeat(4, 270px);
+        grid-auto-rows: 270px;
+        gap: 13px;
+    }
+    &__card {
+        border: 1px solid #000000;
+        padding: 115px 30px 25px 30px;
+        position: relative;
+    }
+    &__icon {
+        position: absolute;
+        bottom: 175px;
+    }
+    &__cards-descr {
+        margin-top: 15px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+    }
+    &__level {
+        margin-top: 128px;
+        display: grid;
+        grid-template: repeat(2, 62px) / repeat(3, 350px);
+        row-gap: 38px;
+        justify-content: space-between;
+    }
+    &__level_card {
+        display: grid;
+        grid-template: 21px 14px/200px 35px;
+        justify-content: space-between;
+        align-content: space-between;
+    }
+    &__level_title {
+        padding-left: 14px;
+        @include before_circle;
+        &:before {
+            top: -9px;
+        }
+    }
+    &__scale {
+        width: 350px;
+        height: 14px;
+        background: #E8E4DE;
+        border-radius: 4px;
+        span {
+            display: block;
+            height: 100%;
+            background-color: $main-color;
+            border-radius: 4px;
+        }
+    }
+    
+}
