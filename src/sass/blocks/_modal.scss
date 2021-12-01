@@ -16,7 +16,7 @@
     min-height: 400px;
     background-color: #ffa601e1;
     padding: 38px 40px 40px 40px;
-    border-radius: 5%;
+    border-radius: 10%;
     &__close {
         position: absolute;
         top: 0;
@@ -68,9 +68,6 @@
         }
         &__descr {
             font-size: 12px;
-        }
-        .feed-form {
-            width: 220px;
         }
     }
 }

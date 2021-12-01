@@ -49,20 +49,23 @@ $(document).ready(function(){
 
     $('form').submit(function(e) {
         e.preventDefault();
+        // if (!$(this).valid()) {
+        //     return;
+        // }
         $.ajax({
             type: "POST",
-            url: "../mailer/smart.php",
+            url: "mailer/smart.php",
             data: $(this).serialize()
-        }).done(function (){
+        }).done(function () {
             $(this).find("input").val("");
-            $('.overlay, #thanks').fadeIn('slow')
+            $('.overlay, #thanks').fadeIn('slow');
             $('form').trigger('reset');
         });
         return false;
     });
 
     // Modal #thanks close
-    
+
     $('.modal__close').on('click', function() {
         $('.overlay, #order').fadeOut('slow');
     });

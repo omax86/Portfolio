@@ -1,8 +1,8 @@
 <?php 
 
 $name = $_POST['name'];
-$phone = $_POST['phone'];
 $email = $_POST['email'];
+$text = $_POST['text'];
 
 require_once('phpmailer/PHPMailerAutoload.php');
 $mail = new PHPMailer;
@@ -32,7 +32,7 @@ $mail->Subject = 'Contacts';
 $mail->Body    = '
 		User left their contacts <br> 
 	name: ' . $name . ' <br>
-	E-mail: ' . $email . ' <br.
+	E-mail: ' . $email . ' <br>
 	text: ' . $text . '';
 
 if(!$mail->send()) {
